@@ -1,0 +1,23 @@
+.navbar-nav {
+    margin-left:auto;
+    margin-right: 30px;;
+
+}
+
+.form-inline{
+  margin-left: auto;
+}
+
+.form-control{
+    background-color: #343a40;
+}
+
+.form-control:focus {
+    background-color: #5b6670;
+    border-color: #299544 !important;
+}
+
+.form-control :focus-visible :focus{
+    box-shadow: #299544;
+    border-color: #299544;
+}
