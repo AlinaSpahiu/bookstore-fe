@@ -33,7 +33,7 @@ const Raiting = ({value, text, color, fontSize}) => {
 
 Raiting.defaultProps = {
     color: "#ffc107",
-    fontSize: '30px'
+    fontSize: '20px'
 }
 
 Raiting.propTypes = {
