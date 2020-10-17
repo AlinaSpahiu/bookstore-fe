@@ -1,0 +1,9 @@
+img{
+    width: 270px;
+    height: 300px;
+}
+
+.card{
+    margin: 10px;
+    justify-content: center;
+}
