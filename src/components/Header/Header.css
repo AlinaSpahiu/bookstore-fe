@@ -10,11 +10,13 @@
 
 .form-control{
     background-color: #343a40;
+    color: #FFFFF3
 }
 
 .form-control:focus {
     background-color: #5b6670;
     border-color: #299544 !important;
+    color: #FFFFF3
 }
 
 .form-control :focus-visible :focus{
