@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">BookStore</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
 
@@ -16,8 +16,10 @@ const Header = () => {
           </Form>
 
           <Nav className="links">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/books">Books</Nav.Link>
+            <Nav.Link href="/cart">Cart<i className="fas fa-shopping-cart ml-"></i></Nav.Link>
+            <Nav.Link href="/cart">Login<i className="fas fa-user ml-1"></i></Nav.Link>
           </Nav>
 
         </Navbar.Collapse>
