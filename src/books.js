@@ -3,7 +3,7 @@ const books = [
         _id: '1',
         title:'Green Hills of Africa',
         author:'Ernest Heminguej',
-        description:'...',
+        description:"His second major venture into nonfiction (after Death in the Afternoon, 1932), Green Hills of Africa is Ernest Hemingway's lyrical journal of a month on safari in the great game country of East Africa, where he and his wife, Pauline, journeyed in December of 1933.Hemingway's well-known interest in - and fascination with - big-game hunting is magnificently captured in this evocative account of his trip. In examining the poetic grace of the chase, and the ferocity of the kill, Hemingway also looks inward, seeking to explain the lure of the hunt and the primal undercurrent that comes alive on the plains of Africa.  ",
         category:'roman',
         price: 10.60,
         countInStock: 4,
@@ -27,28 +27,28 @@ const books = [
 
     {
         _id: '3',
-        title:'Green Hills of Africa',
-        author:'Ernest Heminguej',
+        title:'Spark of life',
+        author:'Erich Maria Remarque',
         description:'...',
         category:'roman',
         price: 10.60,
         countInStock: 4,
         rating: 4.5,
         numReviews: 2,
-        image: "/images/bookImg/greenhills.jpg"
+        image: "/images/bookImg/spark.jpg"
     },
 
     {
         _id: '4',
-        title:'Green Hills of Africa',
-        author:'Ernest Heminguej',
+        title:'Three Comardes',
+        author:'Erich Maria Remarque',
         description:'...',
         category:'roman',
         price: 10.60,
         countInStock: 4,
         rating: 1.5,
         numReviews: 13,
-        image: "/images/bookImg/greenhills.jpg"
+        image: "/images/bookImg/treshoket.jpg"
     },
 
     {
