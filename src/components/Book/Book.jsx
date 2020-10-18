@@ -1,15 +1,17 @@
 import React from "react";
 import {Link} from 'react-router-dom'
-import { Card, Container, Row, Button } from "react-bootstrap";
+import { Card, Row, Button } from "react-bootstrap";
 import "./Book.css";
 import Raiting from '../Raiting/Raiting'
 
+
 const Book = ({ book }) => {
+
   return (
     <Row className="justify-content-center">
       <Card style={{ width: "15rem"}}>
         <Link to={`/book/${book._id}`}>
-          <Card.Img variant="top" src={book.image} fluid/>
+          <Card.Img variant="top" src={book.image} />
         </Link>
 
         <Card.Body>
