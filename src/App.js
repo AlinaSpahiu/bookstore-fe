@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import BooksPage from "./pages/BooksPage";
 import BookDetailsPage from './pages/BookDetailsPage/BookDetailsPage'
+import CartPage from './pages/CartPage/CartPage'
 
 
 
@@ -14,6 +15,7 @@ function App() {
         <>
            <Route path='/books' component={BooksPage} exact />
            <Route path='/book/:id' component={BookDetailsPage} exact />
+           <Route path='/cart/:id?' component={CartPage} exact />
         </>
       <Footer />
     </Router>
