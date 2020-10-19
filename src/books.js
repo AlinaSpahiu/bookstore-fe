@@ -45,7 +45,7 @@ const books = [
         description:'...',
         category:'roman',
         price: 10.60,
-        countInStock: 4,
+        countInStock: 0,
         rating: 1.5,
         numReviews: 13,
         image: "/images/bookImg/treshoket.jpg"
