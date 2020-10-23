@@ -6,11 +6,11 @@ import Loader from "../../components/MessageLoader/Loader";
 import { getUserDetails } from "../../actions/userActions";
 
 const ProfilePage = ({history}) => {
-    const [name, setName] = useState('')
-    const [surname, setSurname] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
+    const [name, setName] = useState("")
+    const [surname, setSurname] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
     const [message, setMessage] = useState(null)
   
     const dispatch = useDispatch()
@@ -30,7 +30,8 @@ const ProfilePage = ({history}) => {
          
           } else {
             setName(user.name)
-            setEmail(user.email)
+            // setSurname(user.surname)
+            // setEmail(user.email)
           }
         }
       }, [dispatch, history, userInfo, user ])
@@ -51,68 +52,64 @@ const ProfilePage = ({history}) => {
               <Col md={3}>
               <h2> User Profile</h2>
             {message && <Message variant='danger'> {message} </Message>}
-            {error && <Message variant='danger'> {error} </Message>}
-            {loading && <Loader />}
-            <Form onSubmit={submitHandler}>
-                {/* Email */}
-              <Form.Group controlId="name">
-                <Form.Label> Name</Form.Label>
+
+            
+            { loading ? (< Loader /> )
+             :  error ? ( 
+              <Message variant='danger'> {error} </Message>
+             
+             ) : (
+
+            
+              <Form onSubmit={submitHandler}>
+              <Form.Group controlId='name'>
+                <Form.Label>Name</Form.Label>
                 <Form.Control
-                  type="name"
-                  placeholder="Enter e-mail"
+                  type='name'
+                  placeholder='Enter name'
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-      
-              {/* Email */}
-              <Form.Group controlId="surname">
-                <Form.Label> Surname</Form.Label>
+  
+              <Form.Group controlId='email'>
+                <Form.Label>Email Address</Form.Label>
                 <Form.Control
-                  type="surname"
-                  placeholder="Enter e-mail"
-                  value={surname}
-                  onChange={(e) => setSurname(e.target.value)}
-                ></Form.Control>
-              </Form.Group>
-      
-                    {/* Email */}
-              <Form.Group controlId="email">
-                <Form.Label> Email Address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter e-mail"
+                  type='email'
+                  placeholder='Enter email'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-      
-              {/* Password */}
-              <Form.Group controlId="password">
-                <Form.Label> Password </Form.Label>
+  
+              <Form.Group controlId='password'>
+                <Form.Label>Password</Form.Label>
                 <Form.Control
-                  type="password"
-                  placeholder="Enter password"
+                  type='password'
+                  placeholder='Enter password'
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-      
-               {/* Password */}
-               <Form.Group controlId="confirmpassword">
-                <Form.Label> Confirm Password </Form.Label>
+  
+              <Form.Group controlId='confirmPassword'>
+                <Form.Label>Confirm Password</Form.Label>
                 <Form.Control
-                  type="password"
-                  placeholder="Confirm Password"
+                  type='password'
+                  placeholder='Confirm password'
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                 ></Form.Control>
               </Form.Group>
+  
       
               <Button type='submit' variant='dark'>
                   Update
               </Button>
             </Form>
+             )
+            
+            }
               </Col>
 
               <Col md={9}>
