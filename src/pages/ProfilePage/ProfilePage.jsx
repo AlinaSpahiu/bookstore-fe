@@ -3,7 +3,7 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../../components/MessageLoader/Message";
 import Loader from "../../components/MessageLoader/Loader";
-import { getUserDetails } from "../../actions/userActions";
+import { getUserDetails, updateUserProfile } from "../../actions/userActions";
 
 const ProfilePage = ({history}) => {
     const [name, setName] = useState("")
@@ -20,18 +20,21 @@ const ProfilePage = ({history}) => {
 
     const userLogin = useSelector((state) => state.userLogin)
     const { userInfo } = userLogin
+
+    const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
+    const { success } = userUpdateProfile
   
     useEffect(() => {
         if (!userInfo) {
           history.push('/login')
         } else {
-          if (!user) {
+          if (!user.name) {
             dispatch(getUserDetails('profile'))
          
           } else {
             setName(user.name)
-            // setSurname(user.surname)
-            // setEmail(user.email)
+            setSurname(user.surname)
+            setEmail(user.email)
           }
         }
       }, [dispatch, history, userInfo, user ])
@@ -42,7 +45,7 @@ const ProfilePage = ({history}) => {
       if(password !== confirmPassword) {
           setMessage('passwords do not match!')
       } else {
-          
+          dispatch(updateUserProfile({ id: user._id, name, email, password}))
       }
      
     }
@@ -51,16 +54,11 @@ const ProfilePage = ({history}) => {
           <Row>
               <Col md={3}>
               <h2> User Profile</h2>
-            {message && <Message variant='danger'> {message} </Message>}
+              {message && <Message variant='danger'> {message} </Message>}
+              {error && <Message variant='danger'> {error} </Message>}
+              {success && <Message variant='success'> Profile Updated </Message>}
+              {loading && <Loader />}
 
-            
-            { loading ? (< Loader /> )
-             :  error ? ( 
-              <Message variant='danger'> {error} </Message>
-             
-             ) : (
-
-            
               <Form onSubmit={submitHandler}>
               <Form.Group controlId='name'>
                 <Form.Label>Name</Form.Label>
@@ -71,6 +69,8 @@ const ProfilePage = ({history}) => {
                   onChange={(e) => setName(e.target.value)}
                 ></Form.Control>
               </Form.Group>
+
+             
   
               <Form.Group controlId='email'>
                 <Form.Label>Email Address</Form.Label>
@@ -109,7 +109,7 @@ const ProfilePage = ({history}) => {
             </Form>
              )
             
-            }
+            
               </Col>
 
               <Col md={9}>
