@@ -4,7 +4,7 @@ import {
 from '../constants/bookConstants'
 
 
-//```
+// ~~~
 // Book List Reducer
 export const bookListReducer = (state={books: []}, action) =>{
       
@@ -21,7 +21,7 @@ export const bookListReducer = (state={books: []}, action) =>{
 }
 
 
-//```
+// ~~~
 // Book List Reducer
 export const bookDetailsReducer = (state={ book: {reviews: []} }, action) =>{
       
