@@ -11,7 +11,6 @@ import ProfilePage from './pages/ProfilePage/ProfilePage'
 import ShippingPage from "./pages/ShippingPage/ShippingPage"
 import PaymentPage from "./pages/PaymentPage/PaymentPage"
 import PlaceOrderPage from "./pages/PlaceOrderPage/PlaceOrderPage"
-import OderPage from "./pages/OrderPage/OrderPage"
 import OrderPage from './pages/OrderPage/OrderPage';
 
 
