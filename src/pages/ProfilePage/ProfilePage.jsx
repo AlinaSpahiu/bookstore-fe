@@ -7,7 +7,7 @@ import { getUserDetails, updateUserProfile } from "../../actions/userActions";
 
 const ProfilePage = ({history}) => {
     const [name, setName] = useState("")
-    const [surname, setSurname] = useState("")
+   // const [surname, setSurname] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
@@ -33,7 +33,7 @@ const ProfilePage = ({history}) => {
          
           } else {
             setName(user.name)
-            setSurname(user.surname)
+           // setSurname(user.surname)
             setEmail(user.email)
           }
         }
