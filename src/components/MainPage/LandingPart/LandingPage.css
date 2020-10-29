@@ -1,0 +1,28 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    /* background: url('/images/bg/9.jpg') ; */
+    background-color: rgb(231, 229, 229) !important;
+
+
+}
+
+#cover{
+    height:100vh;
+    background: url('/images/bg/111.png') ;
+    background-size: cover;
+    color: whitesmoke
+}
+
+.col1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.col1p{
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 100px;
+}
