@@ -74,6 +74,5 @@ const LoginPage = ({location, history}) => {
       </Row>
     </FormContainer>
   );
-};
-
+};;
 export default LoginPage;
