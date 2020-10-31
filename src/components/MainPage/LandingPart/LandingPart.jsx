@@ -1,26 +1,26 @@
-import React from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import './LandingPage.css'
+import React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import "./LandingPage.css";
+import Typical from "react-typical";
+import { CssBaseline } from "@material-ui/core";
 
 const LandingPart = () => {
-    return (
-        <section id='cover'>
-            <Container>
-                <Row className='justify-content-center'>
-                    <h1> Today a READER</h1> 
-                    
+  return (
+    <>
+      <CssBaseline />
 
-                </Row>
-                <Row className='justify-content-center'>
-                   
-                    <h1> Tomorrow a LEADER</h1>
+      <section id="cover">
+        <Row className="justify-content-center">
+          {/* <Typical
+            className="typing"
+            loop={Infinity}
+            wrapper="b"
+            steps={["Today a READER", 2000, "Tomorrow a LEADER", 6000]}
+          /> */}
+        </Row>
+      </section>
+    </>
+  );
+};
 
-                </Row>
-
-            </Container>
-            
-        </section>
-    )
-}
-
-export default LandingPart
+export default LandingPart;
