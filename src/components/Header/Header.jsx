@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from 'react-redux'
-import { Form, FormControl, Button, Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import {  Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap'
 import "./Header.css"
 import {logout} from '../../actions/userActions'
+import transitions from "@material-ui/core/styles/transitions";
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -14,22 +15,22 @@ const Header = () => {
     dispatch(logout())
   }
   return (
-    <header>
-      <Navbar bg='dark' variant='dark' expand="lg">
-        <Container>
+    
+      <Navbar className='navbar active' expand="lg">
+       
           <LinkContainer to='/' >
-            <Navbar.Brand>BookStore</Navbar.Brand>
+            <Navbar.Brand>BoOk<span className="span">st♥rǝ</span></Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
 
-            <Form inline>
+            {/* <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
               <Button variant="outline-success">Search</Button>
-            </Form>
+            </Form> */}
 
-            <Nav className="links">
+            <Nav className="links ml-auto">
               <LinkContainer to='/'>
                 <Nav.Link> Home </Nav.Link>
               </LinkContainer>
@@ -58,9 +59,9 @@ const Header = () => {
           }
             </Nav>
           </Navbar.Collapse>
-        </Container>
+
       </Navbar> 
-    </header>
+    
               
   );
 };
