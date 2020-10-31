@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import BooksPage from "./pages/BooksPage";
 import BookDetailsPage from './pages/BookDetailsPage/BookDetailsPage'
@@ -13,13 +12,16 @@ import PaymentPage from "./pages/PaymentPage/PaymentPage"
 import PlaceOrderPage from "./pages/PlaceOrderPage/PlaceOrderPage"
 import OrderPage from './pages/OrderPage/OrderPage';
 import Home from "./pages/Home/Home"
+import Navbar from "./components/Navbar/Navbar"
+import Header from "./components/Header/Header"
+
 
 
 function App() {
   return (
     <Router>
-      <Header />
-        <>
+ 
+        <Header />
            <Route path='/shipping' component={ShippingPage} />
            <Route path='/payment' component={PaymentPage} />
            <Route path='/placeorder' component={PlaceOrderPage} />
@@ -31,8 +33,8 @@ function App() {
            <Route path='/book/:id' component={BookDetailsPage} exact />
            <Route path='/cart/:id?' component={CartPage} exact />
            <Route path='/' component={Home} exact />
-        </>
-      <Footer />
+      
+  
     </Router>
   );
 }
