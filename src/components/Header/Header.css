@@ -9,7 +9,6 @@
     position: sticky;
     top: 0;
     z-index: 999;
-   
 }
 
 .navbar .active{
@@ -21,6 +20,7 @@
     font-size: 25px !important;
     font-weight: 900 !important;
 }
+
 .span{
     color:#c4c0b7;
     font-weight: 900;
