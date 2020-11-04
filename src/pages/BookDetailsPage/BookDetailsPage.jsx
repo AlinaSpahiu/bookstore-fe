@@ -32,9 +32,6 @@ const BookDetailsPage = ({history, match}) => {
            <Link className='btn btn-dark my-3' to='/books'>Go Back</Link>
 
        
-                 
-           
-
            <Row className='justify-content-center my-3'>
                
                <Col md={6}>
