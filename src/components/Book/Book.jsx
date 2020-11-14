@@ -4,7 +4,6 @@ import { Card, Row, Button } from "react-bootstrap";
 import "./Book.css";
 import Raiting from '../Raiting/Raiting'
 
-
 const Book = ({ book }) => {
 
   return (
