@@ -15,7 +15,6 @@ import Home from "./pages/Home/Home"
 import Navbar from "./components/Navbar/Navbar"
 import Header from "./components/Header/Header"
 
-
 function App() {
   return (
     <Router>
